@@ -1,0 +1,4 @@
+[submodule "kairseq/model_parallel/megatron"]
+    path = kairseq/model_parallel/megatron
+    url = https://github.com/ngoyal2707/Megatron-LM
+    branch = fairseq

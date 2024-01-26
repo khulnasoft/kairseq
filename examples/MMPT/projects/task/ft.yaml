@@ -1,0 +1,13 @@
+includes: projects/task/default.yaml
+# all derived config will be run by kairseq-train.
+task_type: sweep_small
+kairseq:
+  optimization:
+    warmup_updates: 122 # copied from roberta glue: https://github.com/pytorch/kairseq/blob/master/examples/roberta/README.glue.md
+  checkpoint:
+    # save_interval_updates: 512
+    # borrowed from Roberta script.
+    restore_file: runs/task/checkpoint_best.pt
+    reset_optimizer: True
+    reset_dataloader: True
+    reset_meters: True
